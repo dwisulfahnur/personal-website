@@ -129,13 +129,17 @@ a:after {
 /* Helpers */
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	width: 550px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #EFEFEF;
+	margin-right: auto;
+    margin-left: auto;
 }
 
 .pt {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 
@@ -239,4 +243,10 @@ bt {
 .glyphicon {
 	font-size: 40px;
 	color: #1abc9c;
+}
+
+
+anu {
+	margin-left: 20px;
+	width: 500px;
 }
