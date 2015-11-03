@@ -4,6 +4,7 @@ from models import PersonalInformation
 from admin.views import admin_views
 from activities.views import activities_views
 from photos.views import photos_views
+from blog.views import blog_views
 
 
 app = Flask(__name__)
@@ -12,6 +13,7 @@ app = Flask(__name__)
 app.register_blueprint(admin_views)
 app.register_blueprint(activities_views)
 app.register_blueprint(photos_views)
+app.register_blueprint(blog_views)
 
 app.config.from_object('config')
 db.init_app(app)

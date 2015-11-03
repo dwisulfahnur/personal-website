@@ -70,3 +70,23 @@ class Photos(db.Model):
 
     def __repr__(self):
         return '<photos{}>'.format(self.label)
+
+class Blog(db.Model):
+    __tablename__ = 'blog'
+
+    id = db.Column(db.Integer, primary_key = True)
+    title = db.Column(db.String())
+    author = db.Column(db.String())
+    content = db.Column(db.String())
+    created = db.Column(db.String())
+
+    def __init__(self, title, author, content, created):
+        self.title = title
+        self.author = author
+        self.content = content
+        if self.id == None:
+            self.created = datetime.datetime.utcnow()
+            
+
+    def __repr__(self):
+        return '<Blog {}>'.format(self.title)
