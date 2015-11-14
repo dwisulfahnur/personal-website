@@ -1,1 +1,8 @@
-.modal-footer {   border-top: 0px; }
+.modal-footer {   
+	border-top: 0px; 
+}
+
+.footer-zulfa {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}

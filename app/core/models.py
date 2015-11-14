@@ -2,23 +2,6 @@ from datetime import date
 from db import db
 
 
-'''class Users(db.Model):
-    __tablename__ = 'users'
-
-    id = db.Column(db.Integer, primary_key = True)
-    full_name = db.Column(db.String())
-    username = db.Column(db.String())
-    email = db.Column(db.String())
-    password = db.Column(db.String())
-
-    def __init__(self, full_name, username, email, password):
-        self.full_name = full_name
-        self.username = username
-        self.email = email
-        self.password = generate_password_hash(password)
-
-    def __repr__(self):
-        return '<Users{}>'.format(self.username)'''
 
 
 class PersonalInformation(db.Model):

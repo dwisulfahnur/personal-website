@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template
-from db import db
-from models import *
+from app.core.db import db
+from app.core.models import *
+
 photos_views = Blueprint('photos', __name__,
-                        template_folder='../templates',
-                        static_folder='../static')
+                        template_folder='../../templates',
+                        static_folder='../../static')
 
 @photos_views.route('/photos/')
 def photos():
