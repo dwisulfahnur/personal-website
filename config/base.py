@@ -20,4 +20,5 @@ CSRF_ENABLED = True
 CSRF_SESSION_KEY = 'changetowhateveryouwant'
 
 # DATABASE CONFIG
+SQLALCHEMY_TRACK_MODIFICATIONS = True
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(APP_DIR, 'app.db')

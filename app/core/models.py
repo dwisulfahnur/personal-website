@@ -29,13 +29,13 @@ class Activities(db.Model):
     content = db.Column(db.String())
     created = db.Column(db.String())
 
-    def __init__(self, title, content, created):
+    def __init__(self, title, content):
         self.title = title
         self.content = content
         if self.id == None:
             now = date.today()
             self.created = '%d/%d/%d' % (now.day, now.month, now.year)
-            
+ 
 
     def __repr__(self):
         return '<activities: {}>'.format(self.title)
@@ -70,7 +70,7 @@ class Category(db.Model):
             now = date.today()
             self.created = '%d/%d/%d' % (now.day, now.month, now.year)
     def __repr__(self):
-        return '{}'.format(self.name_category)
+        return 'Category {}>'.format(self.name_category)
 
 class Blog(db.Model):
     __tablename__ = 'blog'

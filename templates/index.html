@@ -10,14 +10,13 @@
 					<img style="border-radius:50%; width:30%" src="{{ url_for('.static', filename='assets/img/ds.jpg') }}" alt="DWI SULFAHNUR">
 					<h1>Hi, I am {{personal_information.full_name}}</h1>
 					<p>My full name is {{personal_information.full_name}}, i'm {{personal_information.job}} in {{personal_information.organization}}</p>
-				
+                    <span style="align:left">
+                        <a href="{{ personal_information.facebook }}">My Facebook Account</a></br>
+			            <a href="{{ personal_information.github }}">My Github Account</a></br>
+                        <a href="{{ personal_information.twitter }}">My Twitter Account</a></br>
+                    </span>
 				</div><!-- /col-lg-8 -->
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /ww -->
-	
-	
-	
 	{% endblock %}
-	
-	

@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, abort
-from flask.views import View
 from app.core.db import db
 from app.core.models import *
 blog_views = Blueprint('blog', __name__,
@@ -15,6 +14,7 @@ def blog():
 @blog_views.route('/blog/<id>/')
 def show_post(id):
 	blog = Blog.query.filter_by(id=id).first_or_404()
+	category = Category.query.filter_by(id=blog.id)
 	return render_template('post.html', blog=blog)
 
 @blog_views.route('/blog/category/')

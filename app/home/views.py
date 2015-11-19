@@ -8,5 +8,5 @@ home_views = Blueprint('home', __name__,
 
 @home_views.route('/')
 def home():
-	personal_information = PersonalInformation.query.filter_by(id=2).first()
+	personal_information = PersonalInformation.query.filter_by(full_name='Dwi Sulfahnur').first()
 	return render_template('index.html', **locals())
