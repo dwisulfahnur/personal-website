@@ -2,25 +2,25 @@
 
 - Clone repository
 ``` bash 
-$git clone https://github.com/dwisulfahnur/personal-website
+git clone https://github.com/dwisulfahnur/personal-website
 ```
 
 - Membuat virtual environment di dalam direktori personal-website
 ```bash
-$virtualenv env
+virtualenv env
 ```
 
 - Aktifkan Virtual Environment yang telah dibuat
 ```bash
-$source env/bin/activate
+source env/bin/activate
 ```
 
 - Install Paket yang dibutuhkan
 ```bash
-$pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 #Aplikasi siap dijalankan
 ```bash
-$python manage.py
+python manage.py
 ```
