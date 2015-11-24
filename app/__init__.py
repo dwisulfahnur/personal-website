@@ -21,6 +21,7 @@ db.init_app(app)
 
 # register blueprint
 app.register_blueprint(home_views)
+
 #app.register_blueprint(user_views)
 app.register_blueprint(activities_views)
 app.register_blueprint(photos_views)

@@ -17,8 +17,8 @@
 							{% for message in form.title.errors %}
 								<i><strong style="color:red">*</strong>{{ message }}</i>
 							{% endfor %}
-							{% if form.title.errors %}
-							{{self.title.errors}}
+							{% if form.title.error %}
+								<i><strong style="color:red">*</strong> {{ form.title.error }}</i>
 							{% endif %}
 						<br>
 							{{ form.author(class="form-control", placeholder="Your Name", style="width:500px") }}
