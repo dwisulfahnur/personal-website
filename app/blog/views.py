@@ -2,19 +2,21 @@ from flask import Blueprint, render_template, abort
 from app.core.db import db
 from app.core.models import *
 blog_views = Blueprint('blog', __name__,
-                        template_folder='../../templates',
-                        static_folder='../../static')
+                        template_folder='../templates',
+                        static_folder='../static')
 
 @blog_views.route('/blog')
 def blog():
-	blog = Blog.query.all()
-	return render_template('blog.html', **locals())
+    blog = Blog.query.all()
+    nopost = None
+    if not blog:
+        nopost = 'No Post'
+    return render_template('blog.html', **locals())
 
 
 @blog_views.route('/blog/<id>/')
 def show_post(id):
 	blog = Blog.query.filter_by(id=id).first_or_404()
-	category = Category.query.filter_by(id=blog.id)
 	return render_template('post.html', blog=blog)
 
 @blog_views.route('/blog/category/')

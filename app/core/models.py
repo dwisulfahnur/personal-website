@@ -35,7 +35,7 @@ class Activities(db.Model):
         if self.id == None:
             now = date.today()
             self.created = '%d/%d/%d' % (now.day, now.month, now.year)
- 
+
 
     def __repr__(self):
         return '<activities: {}>'.format(self.title)
@@ -83,14 +83,14 @@ class Blog(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey(Category.id))
     category = db.relationship('Category',
         backref= db.backref('blog', lazy='dynamic'))
-    
+
 
     def __init__(self, title, author, content, category_id):
         self.title = title
         self.author = author
         self.content = content
         self.category_id = category_id
-        
+
         if self.id == None:
             now = date.today()
             self.created = '%d/%d/%d' % (now.day, now.month, now.year)
