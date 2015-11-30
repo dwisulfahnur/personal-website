@@ -1,0 +1,17 @@
+	{% extends "layout.html" %}
+
+	{% block content %}
+	
+	
+	<div class="container pt">
+		<div class="row mt" style="padding-top: 20px;padding-bottom: 20px;">
+			<div class="col-lg-6 col-lg-offset-3 lefted anu" style="margin-left: 20px; 	width: 500px;">
+				{% for p in category %}
+				<li><h4><a href="{{ p.id }}">{{ p.name_category }}</a>  </h4></li>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+	{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layout_admin.html' %}
+{% block title %}
+Post success to Posted
+{% endblock %}
+
+{% block content %}
+	<div class="container pt">
+		<div class="row mt" style="width: 800px; padding-top:5%; padding-bottom:5%">
+			<div class="col-lg-6 col-lg-offset-3 lefted anu" style="	margin-left: 20px; 	width: 750px;">
+				{% for message in get_flashed_messages() %}
+					<p>
+						<center style="color: green"><i>{{ message }}</i></center>
+					</p>
+
+
+				{% endfor %}
+					<a href="{{ url_for('.edit_post')}}">
+						<input type="submit" value="SEE LIST POST" class="btn btn-lg btn-primary btn-block"
+					</a>
+					<br>
+					<a href="{{ url_for('.create_post')}}">
+						<input type="submit" value="CREATED POST" class="btn btn-lg btn-primary btn-block">
+					</a>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

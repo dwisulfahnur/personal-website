@@ -1,0 +1,38 @@
+{% extends "layout_admin.html" %}
+
+{% block content %}
+
+
+<div class="container pt">
+
+
+
+  <div class="row mt" style="padding-top: 20px;padding-bottom: 20px;">
+
+    <div class="col-lg-6 col-lg-offset-3 lefted anu" style="margin-left: 20px; 	width: 500px;">
+      {% for post in blog %}
+      <li><h4><a href="/blog/{{ post.id }} ">{{ post.title }}</a>
+          <span style=""> ======>
+          <a href="/admin/edit_post/{{ post.id }}">Edit</a> |
+          <a href="/admin/delete_post/{{ post.id }}">Delete</a>
+        </span>
+        </h4>
+      </li>
+      {% endfor %}
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages  %}
+          {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      {% if nopost %}
+        <h1><center>{{ nopost }}</center></h1>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

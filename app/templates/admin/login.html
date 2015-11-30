@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Administrator Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('.static', filename='css/signin.css') }}" rel="stylesheet">
+	<script src="{{ url_for('.static', filename='js/ie-emulation-modes-warning.js') }}"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h2><center><strong>Login Administrator</strong></center></h2>
+      <form class="form-signin" action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.username(class="form-control", placeholder="Username") }}
+        {% for message in form.username.errors %}
+        <strong style="color:red">*</strong>{{ message }}
+        {% endfor %}
+        </br>
+
+
+
+
+        {{ form.password(class="form-control", placeholder="Password") }}
+        {% for message in form.password.errors %}
+        <strong style="color:red">*</strong>{{ message }}
+        {% endfor %}
+        <br>
+        <input type="submit" value="Login" class="btn btn-lg btn-primary btn-block">
+        <br>
+        <center>
+            {% for message in get_flashed_messages() %}
+            <i style="color: green">{{ message }}</i>
+            {% endfor %}
+            {% if error %}
+            <b style="color:red">*</b>{{error}}
+            {% endif %}
+        </center>
+        </br>
+
+      </form>
+
+    </div> <!-- /container -->
